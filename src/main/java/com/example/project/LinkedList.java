@@ -62,7 +62,7 @@ public class LinkedList<T> implements List<T>{
         // Example 1.1. Given the list l : A, B, C, B, C, D, E, mostFrequentElement() returns
         // B.
         T mostFrequent=null;
-        int count;int max=0;
+        int count;T max=null;
         Node<T> a =head;
         while(a!=null){
             Node<T> b =a;
