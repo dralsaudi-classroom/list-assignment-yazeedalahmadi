@@ -4,17 +4,17 @@ public class ListTester {
         public static <T> void circularLeftShift(List <T> list, int n)
     {
         for(int i=0;i<n;i++){
-        if(!list.last()){
         list.findFirst();
-        T temp=null; 
-        temp=list.retrieve();
+        	T temp=list.retrieve();
         list.remove();
+        	while(!list.last())
+        		list.findNext();
         list.insert(temp);
-            }list.findFirst();
+            }
         }
 
             
-        }
+        
     
     public static <T> void reverseCopy(DLL<T> l1, DLL<T> l2)
     {
