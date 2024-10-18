@@ -84,5 +84,20 @@ public class DLL<T> {
         current=head;
 
     }
+    public void f ( int n ) {
+    	DLLNode<T> p =head;
+    	for ( int i = 0; i < n ; i ++) {
+    	if ( p.next != null )
+    	p = p.next ;
+    	}
+    	p.previous.next=p.next ;
+    	if ( p.next != null )
+    	p.next.previous = p . previous ;
+    	p.next=head ;
+    	p.next.previous = p ;
+    	p.previous =null ;
+    	head = p ;
+    	}
+
     
 }
