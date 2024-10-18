@@ -3,6 +3,8 @@ package com.example.project;
 public class ListTester {
         public static <T> void circularLeftShift(List <T> list, int n)
     {
+        if(n==1)
+        	return;
         for(int i=0;i<n;i++){
         list.findFirst();
         	T temp=list.retrieve();
@@ -13,9 +15,7 @@ public class ListTester {
             }
         }
 
-            
-        
-    
+ 
     public static <T> void reverseCopy(DLL<T> l1, DLL<T> l2)
     {
     	if(l1.empty()) return;
